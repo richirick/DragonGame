@@ -1,4 +1,4 @@
-fun main(args: Array<String>) {
+fun main() {
     startGame()
     showMenu()
 }
@@ -16,7 +16,7 @@ fun startGame() {
     val player = Player(name, health)
 
     println("$player - игрок создан!")
-    println("Здоровье игрока ${player.getName()} - ${player.healthPoints()}%!")
+    println("Здоровье игрока ${player.getName()} - ${health}%!")
     println("${player.getAttack()} - урон игрока!")
     println("${player.getDeffese()} - защита игрока!")
 
@@ -26,7 +26,7 @@ fun startGame() {
 
     val monster = Monster(healthMonster)
 
-    println("$monster - монстер создан!")
+    println("$monster - монстр создан!")
     println("${monster.getAttack()} - урон монстра!")
     println("${monster.getDeffese()} - защита монстра!")
 
