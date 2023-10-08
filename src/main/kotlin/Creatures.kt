@@ -17,7 +17,7 @@ data class Player(
     private var health: Int
 ) : Creatures() {
 
-    private var healthPointCount = 5
+    private var healthPointCount = 4
     private var currentHealth = health
     private var inputHealth = health
 
@@ -29,7 +29,7 @@ data class Player(
     }
 
     fun healthPoints() {
-        if (healthPointCount > 0) {
+        if (healthPointCount > 0 && currentHealth < health) {
             currentHealth += ((currentHealth * 30) / 100)
             healthPointCount--
             println("Вы можете исцелиться еще $healthPointCount раз")
@@ -41,6 +41,8 @@ data class Player(
             println("Здоровье игрока ${getName()} - изначально дано - ${inputHealth} увеличенное - ${currentHealth}%!")
         } else {
             println("Больше нельзя пополнять здоровье!")
+            //сообщение выводиться в начале игры, но
+        // нужно что бы выводилось допустимое количество исцелений
         }
     }
 
