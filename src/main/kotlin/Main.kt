@@ -1,6 +1,6 @@
 fun main() {
     startGame()
-    showMenu()
+//    showMenu()
 }
 
 fun startGame() {
