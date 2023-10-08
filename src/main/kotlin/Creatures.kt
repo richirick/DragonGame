@@ -25,7 +25,7 @@ data class Player(
     private val deffese: Int = getRandom() // защита
 
     init {
-        println("Игрок создан c именем ${name}!")
+        println("Создан игрок c именем ${name}!")
     }
 
     fun healthPoints() {
@@ -172,7 +172,7 @@ class Game(val player: Player, val monster: Monster) {
 
     private fun damagePlayer() {
         val damage = Random.nextInt(monster.getAttack() - 1) + 1
-        println("Урон игроку равен $damage")
+        println("Игрок получает урон $damage")
         player.setHealthPoints(damage)
     }
 

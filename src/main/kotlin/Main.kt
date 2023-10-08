@@ -15,7 +15,7 @@ fun startGame() {
 
     val player = Player(name, health)
 
-    println("$player - игрок создан!")
+//    println("Игрок создан!")
     println("Здоровье игрока ${player.getName()} - ${health}%!")
     println("${player.getAttack()} - урон игрока!")
     println("${player.getDeffese()} - защита игрока!")
@@ -46,6 +46,7 @@ fun startGame() {
             return
         } // выход
     }
+    showMenu()
 }
 
 fun playGame(player: Player, monster: Monster) {
