@@ -18,8 +18,8 @@ class Game(val player: Player, val monster: Monster) {
     }
 
     private fun playersMove() {
-        dice.calculateMAttackN(player.getAttack(), monster.getDeffese())
-        dice.roll()
+//        dice.calculateMAttackN(player.getAttack(), monster.getDeffese())
+//        dice.roll()
         if (dice.getIsSuccess()) {
             damageMonster()
         } else {
