@@ -10,7 +10,7 @@ fun startGame() {
     print("Введите имя игрока: ")
     val name = readlnOrNull() ?: "NO Name"
     print("Введите здровье игрока: ")
-    val health = readlnOrNull()?.toInt() ?: 100
+    val health = readlnOrNull()?.toIntOrNull() ?: 100
 
     val player = Player(name, health)
 
@@ -20,7 +20,7 @@ fun startGame() {
     println("=========================================")
 
     print("Введите здровье монстра: ")
-    val healthMonster = readlnOrNull()?.toInt() ?: 100
+    val healthMonster = readlnOrNull()?.toIntOrNull() ?: 100
 
     val monster = Monster(name = "Смауг", healthMonster)
 
