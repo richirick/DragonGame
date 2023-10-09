@@ -16,6 +16,7 @@ class Dice {
                  }
             isSuccess = numBuffer.firstOrNull { item -> item == 5 || item == 6 } != null
             println("Результат броска ${isSuccess}")
+            println(numBuffer.joinToString())
             //как сделать что бы выводилось выпавшее значение на кубике?
         }
     }
