@@ -76,6 +76,7 @@ data class Player(
 
 //Монстер
 data class Monster(
+    var name: String = "Смауг",
     private var health: Int
 ) : Creatures() {
 
@@ -84,9 +85,9 @@ data class Monster(
     private val attack: Int = getRandom() // атака (наносимый урон)
     private val deffese: Int = getRandom() // защита
 
-    init {
-        println("Монстр создан ${this.hashCode()}!")
-    }
+//    init {
+//        println("Монстр создан ${this.hashCode()}!")
+//    }
 
     fun getHealth() = currentHealth
 

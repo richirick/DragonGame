@@ -24,9 +24,11 @@ fun startGame() {
     print("Введите здровье монстра: ")
     val healthMonster = readlnOrNull()?.toInt() ?: 100 // найти как проверять, что ввел именно число !
 
-    val monster = Monster(healthMonster)
+    val monster = Monster(name = "Смауг", healthMonster)
 
-    println("$monster - монстр создан!")
+    println("Монстр создан!")
+    println("Имя монстра - ${monster.name}")
+    println("Здоровье монстра ${monster.name} - ${healthMonster}%!")
     println("${monster.getAttack()} - урон монстра!")
     println("${monster.getDeffese()} - защита монстра!")
 
