@@ -37,13 +37,14 @@ class Game(val player: Player, val monster: Monster) {
 
     private fun damagePlayer() {
         val damage = Random.nextInt(monster.getAttack() - 1) + 1
-        println("Игрок получает урон $damage")
+        println("\u001b[31;1m Игрок получает урон $damage\u001b[0m")
+//        u001b[31;1m$messageu001b[0m
         player.setHealthPoints(damage)
     }
 
     private fun damageMonster() {
         val damage = Random.nextInt(player.getAttack() - 1) + 1
-        println("Урон монстру равен $damage")
+        println("\u001b[33;1m Урон монстру равен $damage\u001b[0m")
         monster.setHealthPoints(damage)
     }
 
