@@ -18,6 +18,8 @@ class Game(val player: Player, val monster: Monster) {
     }
 
     private fun playersMove() {
+        dice.calculateMAttackN(player.getAttack(), monster.getDeffese())
+        dice.roll()
         if (dice.getIsSuccess()) {
             damageMonster()
         } else {
@@ -38,7 +40,6 @@ class Game(val player: Player, val monster: Monster) {
     private fun damagePlayer() {
         val damage = Random.nextInt(monster.getAttack() - 1) + 1
         println("\u001b[31;1m Игрок получает урон $damage\u001b[0m")
-//        u001b[31;1m$messageu001b[0m
         player.setHealthPoints(damage)
     }
 

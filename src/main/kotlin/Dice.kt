@@ -13,7 +13,7 @@ class Dice {
         if (mAttackN >= 1) {
             for (elem in 0..mAttackN) {
                 numBuffer.add(countCube.random())
-                break }
+                 }
             isSuccess = numBuffer.firstOrNull { item -> item == 5 || item == 6 } != null
             println("Результат броска ${isSuccess}")
             //как сделать что бы выводилось выпавшее значение на кубике?
