@@ -7,8 +7,8 @@ data class Player(
     private var currentHealth = health
     private var inputHealth = health
 
-    private val attack: Int = getRandom() // атака (наносимый урон)
-    private val deffese: Int = getRandom() // защита
+    private val attack: Int = getRandom()
+    private val deffese: Int = getRandom()
 
     init {
         println("Создан игрок c именем ${name}!")
@@ -27,8 +27,6 @@ data class Player(
             println("Здоровье игрока ${getName()} - изначально дано - ${inputHealth} увеличенное - ${currentHealth}%!")
         } else {
             println("Больше нельзя пополнять здоровье!")
-            //сообщение выводиться в начале игры, но
-            // нужно что бы выводилось допустимое количество исцелений
         }
     }
 
@@ -52,10 +50,8 @@ data class Player(
         }
     }
 
-
     override fun isDied(): Boolean {
         return currentHealth == 0
     }
-
 
 }

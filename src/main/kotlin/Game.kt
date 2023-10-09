@@ -18,8 +18,6 @@ class Game(val player: Player, val monster: Monster) {
     }
 
     private fun playersMove() {
-//        dice.calculateMAttackN(player.getAttack(), monster.getDeffese())
-//        dice.roll()
         if (dice.getIsSuccess()) {
             damageMonster()
         } else {
@@ -66,10 +64,10 @@ class Game(val player: Player, val monster: Monster) {
             2 -> {
                 player.healthPoints()
                 showMenu()
-            } // пополнить здоровье
+            }
             0 -> {
                 isFinishGame = true
-            }// выход
+            }
         }
     }
 

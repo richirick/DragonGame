@@ -5,12 +5,9 @@ data class Monster(
 
     var currentHealth = health
 
-    private val attack: Int = getRandom() // атака (наносимый урон)
-    private val deffese: Int = getRandom() // защита
+    private val attack: Int = getRandom()
+    private val deffese: Int = getRandom()
 
-//    init {
-//        println("Монстр создан ${this.hashCode()}!")
-//    }
 
     fun getHealth() = currentHealth
 
