@@ -75,13 +75,17 @@ class Game(val player: Player, val monster: Monster) {
     private fun checkFinishGame(): Boolean {
         if (monster.isDied()) {
             showStatistic()
-            println("Ура вы победили!")
+            println("=========================================")
+            println("\u001B[35;1m Ура вы победили!\u001B[0m")
+            println("=========================================")
             return true
         }
         if (player.isDied()) {
             showStatistic()
-            println("Вы проиграли!")
-            println("Вы побеждены, убиты и съедены! Слышите? Вы мертвее мертвого.")
+            println("==========================================================================")
+            println("\u001B[31;1m Вы проиграли!\u001B[0m")
+            println("\u001B[31;1m Вы побеждены, убиты и съедены! Слышите? Вы мертвее мертвого.\u001B[0m")
+            println("==========================================================================")
             return true
         }
         return false
