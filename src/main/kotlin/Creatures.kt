@@ -215,6 +215,7 @@ class Game(val player: Player, val monster: Monster) {
         if (player.isDied()) {
             showStatistic()
             println("Вы проиграли!")
+            println("Вы побеждены, убиты и съедены! Слышите? Вы мертвее мертвого.")
             return true
         }
         return false
