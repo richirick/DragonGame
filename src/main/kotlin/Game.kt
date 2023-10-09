@@ -48,6 +48,7 @@ class Game(val player: Player, val monster: Monster) {
     }
 
     private fun showMenu() {
+        println("=========================================")
         println("Бросить кубик?")
         println("1 - Да")
         println("2 - Пополнить здоровье")

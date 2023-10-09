@@ -4,6 +4,7 @@ fun main() {
 }
 
 fun startGame() {
+    println("Добро пожаловать в Dragon Game!")
     println("Начало игры !")
 
     // Меню сделаем
@@ -19,6 +20,7 @@ fun startGame() {
     println("Здоровье игрока ${player.getName()} - ${health}%!")
     println("${player.getAttack()} - урон игрока!")
     println("${player.getDeffese()} - защита игрока!")
+    println("=========================================")
 
 
     print("Введите здровье монстра: ")
@@ -31,6 +33,7 @@ fun startGame() {
     println("Здоровье монстра ${monster.name} - ${healthMonster}%!")
     println("${monster.getAttack()} - урон монстра!")
     println("${monster.getDeffese()} - защита монстра!")
+    println("=========================================")
 
 
     println("Начать игру?")
