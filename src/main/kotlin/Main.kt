@@ -11,7 +11,7 @@ fun startGame() {
     val name = readlnOrNull() ?: "NO Name"
     print("Введите здровье игрока: ")
     val health = readlnOrNull()?.toIntOrNull() ?: 100
-    require(health>0){"Здоровье должно быть меньше чем 0"}
+    require(health>0){"Здоровье должно быть больше чем 0"}
     val player = Player(name, health)
 
 
@@ -22,7 +22,7 @@ fun startGame() {
 
     print("Введите здровье монстра: ")
     val healthMonster = readlnOrNull()?.toIntOrNull() ?: 100
-    require(healthMonster>0){"Здоровье должно быть меньше чем 0"}
+    require(healthMonster>0){"Здоровье должно быть больше чем 0"}
     val monster = Monster(name = "Смауг", healthMonster)
 
     println("Монстр создан!")
