@@ -18,7 +18,7 @@ data class Player(
         if (healthPointCount > 0 && currentHealth < health) {
             currentHealth += ((currentHealth * 30) / 100)
             healthPointCount--
-            println("Вы можете исцелиться еще $healthPointCount раз")
+            println("\u001B[36;1m Вы можете исцелиться еще $healthPointCount раз\u001B[0m")
             if (currentHealth > inputHealth) {
                 currentHealth = inputHealth
             } else {
